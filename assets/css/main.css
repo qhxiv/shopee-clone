@@ -9,36 +9,36 @@
 }
 
 .header__navbar-list {
-    list-style: none;
+    list-style  : none;
     padding-left: 0;
-    margin-top: 9px;
+    margin-top  : 9px;
 }
 
 .header__navbar-item {
-    margin: 0 8px;
+    margin  : 0 8px;
     position: relative;
 }
 
 .header__navbar-item,
 .header__navbar-item-link {
-    display: inline-block;
-    font-size: 1.3rem;
-    font-weight: 300;
-    color: var(--white-color);
+    display        : inline-block;
+    font-size      : 1.3rem;
+    font-weight    : 300;
+    color          : var(--white-color);
     text-decoration: none;
 }
 
 .header__navbar-item,
 .header__navbar-item-link,
 .header__navbar-icon-link {
-    display: inline-flex;
+    display    : inline-flex;
     align-items: center;
 }
 
 .header__navbar-item:hover,
 .header__navbar-item-link:hover,
 .header__navbar-icon-link:hover {
-    color: rgba(255, 255, 255, 0.7);
+    color : rgba(255, 255, 255, 0.7);
     cursor: pointer;
 }
 
@@ -47,28 +47,69 @@
 }
 
 .header__navbar-item--separate::after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 1px;
-    height: 16px;
+    content    : "";
+    display    : block;
+    position   : absolute;
+    width      : 1px;
+    height     : 16px;
     border-left: 1px solid #fb9086;
-    right: -11px;
-    top: 50%;
-    transform: translateY(-50%);
+    right      : -11px;
+    top        : 50%;
+    transform  : translateY(-50%);
 }
 
 .header__navbar-icon-link {
-    color: var(--white-color);
+    color          : var(--white-color);
     text-decoration: none;
 }
 
 .header__navbar-icon {
     font-size: 1.8rem;
-    padding: 0 4px;
+    padding  : 0 4px;
 }
 
 .header__navbar-title-no-pointer {
     cursor: default;
-    color: var(--white-color);
+    color : var(--white-color);
+}
+
+.header__navbar-item:hover .header__qr {
+    display: block;
+}
+
+.header__qr {
+    width           : 186px;
+    background-color: var(--white-color);
+    position        : absolute;
+    left            : 0;
+    top             : 150%;
+    padding         : 8px;
+    border-radius   : 2px;
+    display         : none;
+    animation       : fadeIn ease-in 0.25s;
+    box-shadow      : 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.header__qr::before {
+    content : "";
+    display : block;
+    width   : 100%;
+    height  : 20px;
+    position: absolute;
+    left    : 0;
+    top     : -16px;
+}
+
+.header__qr-img {
+    width: 100%;
+}
+
+.header__qr-apps {
+    display        : flex;
+    justify-content: space-between;
+    padding        : 0 11px;
+}
+
+.header__qr-download-img {
+    height: 16px;
 }
