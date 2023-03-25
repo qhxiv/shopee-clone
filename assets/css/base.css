@@ -58,7 +58,7 @@ html {
 }
 
 .modal__body {
-    background-color: red;
+    background-color: var(--white-color);
     margin: auto;
     border-radius: 5px;
     z-index: 1;
