@@ -256,6 +256,7 @@
     display        : flex;
     align-items    : center;
     justify-content: space-between;
+    padding        : 10px 12px 0;
 }
 
 .auth-form__heading {
@@ -343,4 +344,26 @@
 
 .auth-form__socials-title {
     margin: 0 36px;
+}
+
+.auth-form__help {
+    display        : flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link {
+    text-decoration: none;
+    font-size      : 1.4rem;
+    color          : #939393;
+}
+
+.auth-form__help-separate {
+    display    : block;
+    border-left: 1px solid #eaeaea;
+    height     : 22px;
+    margin     : -4px 16px 0;
+}
+
+.auth-form__help-forgot {
+    color: var(--primary-color);
 }
