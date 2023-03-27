@@ -1,8 +1,9 @@
 :root {
     --primary-color: #ee4d2d;
-    --white-color: white;
-    --black-color: black;
-    --text-color: #333;
+    --white-color  : white;
+    --black-color  : black;
+    --text-color   : #333;
+    --border-color : #dbdbdb;
 }
 
 * {
@@ -10,16 +11,16 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size  : 62.5%;
     line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+    box-sizing : border-box;
 }
 
 .grid {
-    width: 1200px;
+    width    : 1200px;
     max-width: 100%;
-    margin: 0 auto;
+    margin   : 0 auto;
 }
 
 .grid__full-width {
@@ -27,7 +28,7 @@ html {
 }
 
 .grid__row {
-    display: flex;
+    display  : flex;
     flex-wrap: wrap;
 }
 
@@ -35,6 +36,7 @@ html {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -43,23 +45,39 @@ html {
 /* Modal */
 .modal {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
+    top     : 0;
+    right   : 0;
+    bottom  : 0;
+    left    : 0;
+    display : flex;
 }
 
 .modal__overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    position        : absolute;
+    height          : 100%;
+    width           : 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal__body {
     background-color: var(--white-color);
-    margin: auto;
-    border-radius: 5px;
-    z-index: 1;
+    margin          : auto;
+    border-radius   : 5px;
+    z-index         : 1;
+}
+
+/* Button style */
+.btn {
+    min-width      : 142px;
+    height         : 36px;
+    text-decoration: none;
+    border         : none;
+    border-radius  : 2px;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.btn.btn--primary {
+    color           : var(--white-color);
+    background-color: var(--primary-color);
 }
