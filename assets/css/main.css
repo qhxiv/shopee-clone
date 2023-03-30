@@ -131,6 +131,7 @@
     animation       : headerNotifyGrowth ease-in 0.2s;
     will-change     : opacity, transform;
     display         : none;
+    z-index         : 1;
 }
 
 .header__notify::before {
@@ -399,20 +400,27 @@
 }
 
 .header__cart-icon {
-    font-size : 2.4rem;
-    color     : var(--white-color);
-    margin-top: 6px;
+    font-size  : 2.4rem;
+    color      : var(--white-color);
+    margin-top : 6px;
+    user-select: none;
+}
+
+.header__search-input-wrap {
+    flex    : 1;
+    height  : 100%;
+    position: relative;
 }
 
 .header__search-input {
-    flex         : 1;
+    width        : 100%;
     height       : 100%;
     border       : none;
     outline      : none;
-    font-size    : 1.4rem;
+    font-size    : 1.5rem;
     color        : var(--text-color);
     padding      : 0 16px;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 .header__search-select {
@@ -437,7 +445,7 @@
     background-color: var(--primary-color);
     border          : none;
     height          : 34px;
-    border-radius   : 3px;
+    border-radius   : 2px;
     margin-right    : 3px;
     width           : 60px;
 }
@@ -464,7 +472,7 @@
     background-color: var(--white-color);
     margin-top      : 12px;
     list-style      : none;
-    border-radius   : 3px;
+    border-radius   : 2px;
     padding-left    : 0;
     width           : 130px;
     box-shadow      : 0 1px 2px rgb(241, 240, 240);
@@ -516,4 +524,53 @@
 .header__search-options-item:hover {
     background-color: #fafafa;
     cursor          : pointer;
+}
+
+.header__search-input:focus~.header__search-history {
+    display: block;
+}
+
+/* Search history */
+.header__search-history {
+    position        : absolute;
+    top             : calc(100% + 4px);
+    left            : 0;
+    width           : calc(100% - 16px);
+    background-color: var(--white-color);
+    border-radius   : 2px;
+    box-shadow      : 0 1px 5px rgb(205, 203, 203);
+    display         : none;
+}
+
+.header__search-history-heading {
+    margin     : 10px 12px;
+    font-size  : 1.4rem;
+    color      : #999;
+    font-weight: 400;
+    display    : block;
+}
+
+.header__search-history-list {
+    list-style  : none;
+    padding-left: 0;
+    margin      : 6px 0 0;
+    overflow    : hidden;
+}
+
+.header__search-history-item {
+    height : 38px;
+    padding: 0 12px;
+}
+
+.header__search-history-item:hover {
+    background-color: #fafafa;
+}
+
+.header__search-history-item a {
+    text-decoration: none;
+    line-height    : 38px;
+    font-size      : 1.4rem;
+    display        : block;
+    width          : 100%;
+    color          : var(--text-color);
 }
