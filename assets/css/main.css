@@ -401,13 +401,9 @@
 
 .header__cart-wrap {
     position: relative;
-    display: inline-block;
-    padding: 0 12px;
-    cursor: pointer;
-}
-
-.header__cart-wrap:hover .header__cart-list {
-    display: block;
+    display : inline-block;
+    padding : 0 12px;
+    cursor  : pointer;
 }
 
 .header__cart-icon {
@@ -417,26 +413,39 @@
     user-select: none;
 }
 
+.header__cart-wrap:hover .header__cart-list {
+    display: block;
+}
+
+.header__cart-list--no-cart .header__cart-no-cart-img,
+.header__cart-list--no-cart .header__cart-list-no-cart-msg {
+    display     : block;
+    margin-left : auto;
+    margin-right: auto;
+}
+
 .header__cart-list {
-    position: absolute;
-    top: calc(100% + 10px);
-    right: -1px;
+    position        : absolute;
+    top             : calc(100% + 10px);
+    right           : -1px;
     background-color: var(--white-color);
-    width: 400px;
-    border-radius: 2px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    display: none;
-    animation: fadeIn ease-in 0.2s;
+    width           : 400px;
+    border-radius   : 2px;
+    box-shadow      : 0 0 10px rgba(0, 0, 0, 0.2);
+    display         : none;
+    animation       : fadeIn ease-in 0.2s;
+    cursor          : default;
 }
 
 .header__cart-list::before {
-    content: "";
-    position: absolute;
-    right: 1px;
-    top: -30px;
-    border-width: 20px 26px;
+    content     : "";
+    position    : absolute;
+    right       : 13px;
+    top         : -20px;
+    border-width: 10px 14px;
     border-style: solid;
     border-color: transparent transparent var(--white-color) transparent;
+    cursor      : pointer;
 }
 
 .header__cart-list--no-cart {
@@ -444,15 +453,29 @@
 }
 
 .header__cart-list-no-cart-msg {
-    display: block;
-    font-size: 1.4rem;
-    margin-top: 14px;
-    color: var(--text-color);
+    display    : none;
+    font-size  : 1.4rem;
+    margin-top : 14px;
+    color      : var(--text-color);
     user-select: none;
 }
 
+.header__cart-notice {
+    position        : absolute;
+    top             : -8px;
+    right           : -4px;
+    padding         : 1px 7px;
+    background-color: var(--white-color);
+    color           : var(--primary-color);
+    font-size       : 1.4rem;
+    line-height     : 1.4rem;
+    border-radius   : 10px;
+    border          : 2px solid #f24f2e;
+}
+
 .header__cart-no-cart-img {
-    width: 54%;
+    display: none;
+    width  : 54%;
 }
 
 .header__search-input-wrap {
