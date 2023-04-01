@@ -12,12 +12,98 @@
     list-style  : none;
     padding-left: 0;
     margin      : 9px 0 0 0;
+    display     : flex;
 }
 
 .header__navbar-item {
     margin  : 0 8px;
     position: relative;
 }
+
+.header__navbar-user {
+    display      : flex;
+    justify-items: center;
+    position     : relative;
+}
+
+.header__navbar-user-img {
+    height       : 22px;
+    width        : 22px;
+    border-radius: 50%;
+    border       : 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.header__navbar-user-name {
+    margin-left: 4px;
+    font-size  : 1.3rem;
+    font-weight: 400;
+}
+
+.header__navbar-user:hover::before,
+.header__navbar-user:hover .header__navbar-user-menu {
+    display: block;
+}
+
+.header__navbar-user::before {
+    content : "";
+    height  : 16px;
+    width   : calc(100% + 8px);
+    position: absolute;
+    bottom  : -10px;
+    right   : 0;
+    display : none;
+}
+
+.header__navbar-user-menu {
+    position        : absolute;
+    padding-left    : 0;
+    top             : calc(100% + 8px);
+    right           : 0;
+    list-style      : none;
+    background-color: var(--white-color);
+    border-radius   : 2px;
+    width           : 160px;
+    z-index         : 1;
+    box-shadow      : 0 1px 2px #e0e0e0;
+    display         : none;
+    animation       : fadeIn ease-in 0.2s;
+}
+
+.header__navbar-user-menu::before {
+    content     : "";
+    display     : block;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    border-width: 11px 13px;
+    position    : absolute;
+    right       : 6px;
+    top         : -22px;
+}
+
+.header__navbar-user-item {}
+
+.header__navbar-user-item a {
+    text-decoration: none;
+    color          : var(--text-color);
+    font-size      : 1.4rem;
+    padding        : 8px 16px;
+    display        : block;
+}
+
+.header__navbar-user-item a:first-child {
+    border-top-left-radius : 2px;
+    border-top-right-radius: 2px;
+}
+
+.header__navbar-user-item a:last-child {
+    border-bottom-left-radius : 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.header__navbar-user-item a:hover {
+    background-color: #fafafa;
+}
+
 
 .header__navbar-item,
 .header__navbar-item-link {
@@ -31,7 +117,7 @@
 .header__navbar-item,
 .header__navbar-item-link,
 .header__navbar-icon-link {
-    display    : inline-flex;
+    display    : flex;
     align-items: center;
 }
 
