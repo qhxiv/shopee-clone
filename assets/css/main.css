@@ -82,6 +82,10 @@
 
 .header__navbar-user-item {}
 
+.header__navbar-user-item--separate {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .header__navbar-user-item a {
     text-decoration: none;
     color          : var(--text-color);
@@ -107,7 +111,6 @@
 
 .header__navbar-item,
 .header__navbar-item-link {
-    display        : inline-block;
     font-size      : 1.3rem;
     font-weight    : 300;
     color          : var(--white-color);
@@ -149,6 +152,10 @@
     text-decoration: none;
 }
 
+.header__navbar-icon-link:nth-child(2) {
+    margin-left: 3px;
+}
+
 .header__navbar-icon {
     font-size: 1.8rem;
     padding  : 0 4px;
@@ -168,6 +175,7 @@
 
 .header__qr {
     width           : 186px;
+    cursor          : default;
     background-color: var(--white-color);
     position        : absolute;
     left            : 0;
@@ -201,6 +209,7 @@
 
 .header__qr-download-img {
     height: 16px;
+    cursor: pointer;
 }
 
 /* Header notification */
@@ -210,14 +219,15 @@
     right           : 0;
     width           : 404px;
     background-color: var(--white-color);
-    border          : 1px solid #d3d3d3;
+    border          : 1px solid rgba(0, 0, 0, 0.1);
     cursor          : default;
     user-select     : none;
-    transform-origin: calc(100% - 20px) top;
+    transform-origin: calc(100% - 32px) top;
     animation       : headerNotifyGrowth ease-in 0.2s;
     will-change     : opacity, transform;
     display         : none;
     z-index         : 1;
+    border-radius   : 2px;
 }
 
 .header__notify::before {
@@ -465,6 +475,11 @@
 
 .header__logo {
     width: 200px;
+}
+
+.header__logo-link {
+    text-decoration: none;
+    color          : transparent;
 }
 
 .header__logo-img {
@@ -736,7 +751,7 @@
     display         : none;
     position        : absolute;
     right           : 0;
-    top             : 100%;
+    top             : calc(100% - 1px);
     background-color: var(--white-color);
     margin-top      : 12px;
     list-style      : none;
