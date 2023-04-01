@@ -106,13 +106,13 @@ html {
     text-decoration : none;
     border          : none;
     border-radius   : 2px;
-    background-color: transparent;
+    background-color: var(--white-color);
     font-size       : 1.5rem;
     padding         : 0 12px;
     outline         : none;
     color           : var(--text-color);
     cursor          : pointer;
-    display         : flex;
+    display         : inline-flex;
     justify-content : center;
     align-items     : center;
     line-height     : 1.6rem;
