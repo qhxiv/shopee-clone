@@ -912,3 +912,74 @@
     right: -4px;
     color: var(--primary-color);
 }
+
+/* Home sort + filter */
+.home-filter {
+    background-color: #ededed;
+    display         : flex;
+    align-items     : center;
+    padding         : 16px 22px;
+    border-radius   : 2px;
+}
+
+.home-filter__label {
+    color       : #555;
+    font-size   : 1.4rem;
+    margin-right: 16px;
+}
+
+.home-filter__btn {
+    margin-right: 12px;
+    min-width   : 90px;
+}
+
+.home-filter__page {
+    display    : flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.home-filter__page-num {
+    font-size   : 1.4rem;
+    color       : var(--text-color);
+    margin-right: 22px;
+}
+
+.home-filter__page-current {
+    color: var(--primary-color);
+}
+
+.home-filter__page-control {
+    display      : flex;
+    border-radius: 2px;
+    overflow     : hidden;
+    width        : 72px;
+    height       : 36px;
+    box-shadow   : 0 1px 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.home-filter__page-btn {
+    text-decoration : none;
+    flex            : 1;
+    background-color: var(--white-color);
+    display         : flex;
+}
+
+.home-filter__page-btn:first-child {
+    border-right: 1px solid #eee;
+}
+
+.home-filter__page-btn--disabled {
+    background-color: #f9f9f9;
+    cursor          : default;
+}
+
+.home-filter__page-btn--disabled .home-filter__icon {
+    color: #cfcfcf;
+}
+
+.home-filter__icon {
+    margin   : auto;
+    font-size: 1rem;
+    color    : #555;
+}

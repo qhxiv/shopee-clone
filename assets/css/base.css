@@ -138,3 +138,65 @@ html {
     font-size: 1.2rem;
     padding  : 0 8px;
 }
+
+/* Selection */
+.select-input {
+    background-color: var(--white-color);
+    height          : 34px;
+    padding         : 0 12px;
+    min-width       : 200px;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    border-radius   : 2px;
+    position        : relative;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1rem;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list::before {
+    content : "";
+    position: absolute;
+    top     : -1px;
+    left    : 0;
+    height  : 1px;
+    width   : 100%;
+}
+
+.select-input__list {
+    position        : absolute;
+    right           : 0;
+    left            : 0;
+    top             : 25px;
+    background-color: var(--white-color);
+    color           : var(--text-color);
+    list-style      : none;
+    padding         : 8px 16px;
+    border-radius   : 2px;
+    display         : none;
+    animation       : fadeIn ease-in 0.1s;
+}
+
+.select-input__item {}
+
+.select-input__link {
+    text-decoration: none;
+    color          : var(--text-color);
+    font-size      : 1.4rem;
+    display        : block;
+    padding        : 6px 0;
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+}
