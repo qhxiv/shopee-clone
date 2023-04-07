@@ -1,9 +1,10 @@
 :root {
-    --primary-color: #ee4d2d;
-    --white-color  : white;
-    --black-color  : black;
-    --text-color   : #333;
-    --border-color : #dbdbdb;
+    --primary-color  : #ee4d2d;
+    --white-color    : white;
+    --black-color    : black;
+    --text-color     : #333;
+    --border-color   : #dbdbdb;
+    --star-gold-color: #ffce3e;
 
     --navbar-height            : 34px;
     --header-height            : 120px;
