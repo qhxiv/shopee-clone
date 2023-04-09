@@ -193,6 +193,7 @@ html {
     display         : none;
     animation       : fadeIn ease-in 0.1s;
     box-shadow      : 0 1px 2px #e0e0e0;
+    z-index         : 1;
 }
 
 .select-input__item {}
@@ -202,7 +203,7 @@ html {
     color          : var(--text-color);
     font-size      : 1.4rem;
     display        : block;
-    padding        : 6px 0;
+    padding        : 9px 0;
 }
 
 .select-input__link:hover {
