@@ -1051,7 +1051,15 @@
     flex-wrap  : wrap;
 }
 
+.home-product-item__price u {
+    font-size    : 1rem;
+    position     : relative;
+    bottom       : -1px;
+    padding-right: 1px;
+}
+
 .home-product-item__price-old {
+    display        : flex;
     margin-left    : 8px;
     font-size      : 1.4rem;
     text-decoration: line-through;
@@ -1059,6 +1067,7 @@
 }
 
 .home-product-item__price-curent {
+    display    : flex;
     font-size  : 1.6rem;
     color      : var(--primary-color);
     margin-left: 8px;
@@ -1117,7 +1126,7 @@
     top             : 0;
     right           : 0;
     width           : 40px;
-    height          : 36px;
+    height          : 33px;
     background-color: rgba(254, 213, 33, 0.94);
     text-align      : center;
     line-height     : 1.4rem;
