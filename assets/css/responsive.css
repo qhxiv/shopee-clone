@@ -8,6 +8,29 @@
         --header-height: 68px;
         --navbar-height: 0px;
     }
+
+    .header {
+        position: fixed;
+        top     : 0;
+        right   : 0;
+        left    : 0;
+        z-index : 10;
+    }
+
+    .header__cart-list {
+        position: fixed;
+        top     : var(--header-height);
+        width   : 100%;
+        padding : 0 calc((100% - 664px) / 2);
+    }
+
+    .header__cart-list::before {
+        display: none;
+    }
+
+    .app_container {
+        margin-top: var(--header-height);
+    }
 }
 
 /* Tablet */
