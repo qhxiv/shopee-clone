@@ -39,6 +39,10 @@
     .app__content {
         padding-top: 8px;
     }
+
+    .mobile-category {
+        display: block;
+    }
 }
 
 /* Tablet */
@@ -89,6 +93,18 @@
         display   : none;
     }
 
+    @keyframes mobileSearchSideIn {
+        from {
+            top    : calc(var(--header-height) / 2);
+            opacity: 0;
+        }
+
+        to {
+            top    : var(--header-height);
+            opacity: 1;
+        }
+    }
+
     .header__search-history {
         position  : fixed;
         top       : calc(var(--header-height) + var(--header-sort-bar-height));
@@ -111,15 +127,15 @@
         margin: 0 4px;
     }
 
-    @keyframes mobileSearchSideIn {
-        from {
-            top    : calc(var(--header-height) / 2);
-            opacity: 0;
-        }
+    .header__mobile-search {
+        display: block;
+    }
 
-        to {
-            top    : var(--header-height);
-            opacity: 1;
-        }
+    .header__logo-img {
+        width: 110px;
+    }
+
+    .footer {
+        padding: 0 16px;
     }
 }

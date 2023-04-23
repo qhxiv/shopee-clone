@@ -472,6 +472,7 @@
 
 .header__mobile-search {
     padding: 0 12px;
+    display: none;
 }
 
 .header__mobile-search-icon {
@@ -1073,7 +1074,9 @@
 }
 
 /* Mobile category */
-.mobile-category {}
+.mobile-category {
+    display: none;
+}
 
 .mobile-category__list {
     display     : flex;
@@ -1121,6 +1124,7 @@
     font-weight        : 300;
     user-select        : none;
     -webkit-user-select: none;
+    padding            : 0 6px;
 }
 
 /* Product item */
