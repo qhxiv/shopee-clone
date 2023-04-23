@@ -242,5 +242,6 @@ html {
 }
 
 .home-product__pagination {
-    margin: 40px 0 162px 0;
+    margin      : 40px 0 162px 0;
+    padding-left: 0;
 }
